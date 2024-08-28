@@ -54,6 +54,7 @@
   --fs-11: 1.4rem;
   --fs-12: 1.3rem;
 
+
   --fw-600: 600;
   --fw-500: 500;
 
@@ -403,11 +404,14 @@ body {
   background-color: var(--go-green);
 }
 
-.hero-title { margin-block: 10px 15px; }
+.hero-title { 
+  margin-block: 10px 15px; 
+  font-size: 6rem;
+}
 
 .hero-text { color: var(--rich-black-fogra-29-1); }
 
-.hero .btn-group { margin-block-start: 40px; }
+.hero .btn-group { margin-block-start: 10px; }
 
 .hero .btn-icon {
   background-color: var(--go-green);
@@ -582,11 +586,22 @@ body {
 
 .features-card:hover .card-number { color: var(--go-green); }
 
-.features-card .card-title {
-  font-size: var(--fs-6);
-  margin-block-end: 5px;
-  color: rgb(38, 122, 181);
+.card-logo-1 {
+  margin-block-end: 50px;
 }
+.card-logo-2 {
+  margin-block-end: 5px;
+}
+.card-logo-3 {
+  margin-block-end: 20px;
+}
+.card-logo-4 {
+  margin-block-end: 73px;
+}
+.card-logo-5 {
+  margin-block-end: 5px;
+}
+
 .t{
   color: #577EB5;
 }
@@ -594,6 +609,11 @@ body {
 
 .features-card:hover :is(.card-title, .card-text) { color: var(--white); }
 
+.service-card .card-icon {
+  max-width: max-content;
+  margin-inline: auto;
+  margin-block-end: 10px; 
+}
 
 
 
