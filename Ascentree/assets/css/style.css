@@ -324,7 +324,7 @@ body {
   padding: 30px 20px;
   visibility: hidden;
   transition: 0.25s var(--cubic-out);
-  z-index: 4;
+  z-index: -100;
 }
 
 .navbar.active {
@@ -984,10 +984,10 @@ body {
   .navbar .wrapper,
   .overlay { display: none; }
 
-  .header { padding: 20px; }
+  .header { padding: 20px; background-color: #ffffff;}
 
   .navbar,
-  .navbar.active { all: unset; }
+  .navbar.active { all: unset;  }
 
   .navbar-list {
     display: flex;
@@ -1156,3 +1156,13 @@ body {
   .faq-card .card-action.active + .card-content { max-height: 200px; }
 
 }
+
+/*-----------------------------------*\
+  #KNOW MORE
+\*-----------------------------------*/
+
+.know-more {
+  background-color: var(--go-green);
+  padding-block: 100px;
+}
+
