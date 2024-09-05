@@ -1166,3 +1166,22 @@ body {
   padding-block: 100px;
 }
 
+.scroller {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroller-list {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.scroller-list li {
+  list-style-type: none;
+}
+
+.scroller-list img {
+  width: 200px; /* Adjust width as needed */
+  margin-right: 20px;
+}

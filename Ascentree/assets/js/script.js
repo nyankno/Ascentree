@@ -74,3 +74,37 @@ const accordionAction = document.querySelectorAll("[data-accordion-action]");
 const toggleAccordion = function () { this.classList.toggle("active"); }
 
 addEventOnElem(accordionAction, "click", toggleAccordion);
+
+// script for the logo scroller
+
+
+
+
+const scrollerList = document.querySelector('.scroller-list');
+const scrollerItems = document.querySelectorAll('.scroller-list li');
+const itemWidth = scrollerItems[0].offsetWidth + 20; // Width of the logo + margin
+let index = 0;
+
+function scrollLogos() {
+  index++;
+  if (index >= scrollerItems.length) {
+    index = 0;
+  }
+
+  scrollerList.style.transform = `translateX(-${index * itemWidth}px)`;
+
+  setTimeout(() => {
+    // Move the first element to the end of the list
+    scrollerList.appendChild(scrollerList.firstElementChild);
+    scrollerList.style.transition = 'none'; // Disable transition for reset
+    scrollerList.style.transform = `translateX(-${(index - 1) * itemWidth}px)`; // Reset position
+
+    setTimeout(() => {
+      scrollerList.style.transition = 'transform 0.5s ease-in-out'; // Re-enable transition
+      scrollerList.style.transform = `translateX(-${index * itemWidth}px)`; // Move to the next
+    }, 50);
+  }, 500);
+}
+
+setInterval(scrollLogos, 3000); // Adjust the speed of the scroller
+
